@@ -1,2 +1,2 @@
 # -neovx-site
-More than a coin
+More Than a Coin
