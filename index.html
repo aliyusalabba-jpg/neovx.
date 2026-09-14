@@ -1,135 +1,1145 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>NEOVX — More Than A Coin</title>
 
 <style>
+
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
+
     background: #05050a;
+
     color: #ffffff;
+
     line-height: 1.6;
+
 }
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
 
 /* NAVIGATION */
 
 nav {
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     padding: 20px 7%;
-    background: rgba(5,5,10,0.9);
+
+    background: rgba(5,5,10,0.92);
+
     backdrop-filter: blur(15px);
+
     border-bottom: 1px solid rgba(255,255,255,0.08);
+
 }
 
 .logo {
-    font-size: 24px;
+
+    font-size: 25px;
+
     font-weight: 900;
-    letter-spacing: 4px;
+
+    letter-spacing: 5px;
+
+    background: linear-gradient(90deg,#ffffff,#9e7cff,#00eaff);
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
 }
 
 .nav-links {
+
     display: flex;
-    gap: 25px;
+
+    gap: 28px;
+
     font-size: 14px;
+
     color: #bdbdc7;
+
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+
+    color: #00eaff;
+
 }
 
 /* HERO */
 
 .hero {
-    min-height: 90vh;
+
+    min-height: 92vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
     padding: 80px 20px;
+
     background:
-        radial-gradient(circle at 50% 30%, rgba(110,40,255,0.25), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(0,220,255,0.15), transparent 35%);
+
+        radial-gradient(circle at 50% 25%, rgba(110,40,255,0.30), transparent 38%),
+
+        radial-gradient(circle at 15% 75%, rgba(0,220,255,0.14), transparent 35%),
+
+        radial-gradient(circle at 85% 70%, rgba(255,0,160,0.12), transparent 35%);
+
 }
 
 .hero-content {
-    max-width: 900px;
+
+    max-width: 1000px;
+
 }
 
 .hero h1 {
-    font-size: clamp(60px, 13vw, 150px);
-    letter-spacing: 15px;
+
+    font-size: clamp(65px, 14vw, 160px);
+
+    letter-spacing: 18px;
+
     font-weight: 900;
-    background: linear-gradient(90deg,#ffffff,#9e7cff,#00eaff);
+
+    background: linear-gradient(90deg,#ffffff,#a978ff,#00eaff);
+
     -webkit-background-clip: text;
+
     color: transparent;
+
+    text-shadow: 0 0 50px rgba(120,70,255,0.2);
+
 }
 
 .hero h2 {
-    margin-top: 10px;
-    font-size: clamp(25px,5vw,55px);
-    letter-spacing: 5px;
+
+    margin-top: 5px;
+
+    font-size: clamp(25px,5vw,58px);
+
+    letter-spacing: 6px;
+
 }
 
 .hero p {
-    margin: 25px auto;
-    max-width: 650px;
+
+    margin: 28px auto;
+
+    max-width: 700px;
+
     color: #aaaab7;
+
     font-size: 18px;
+
 }
 
 .btn {
+
     display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
+
+    margin-top: 18px;
+
+    padding: 15px 32px;
+
     border: 1px solid #8d63ff;
+
     border-radius: 6px;
+
     background: linear-gradient(90deg,#7b45ff,#00cfff);
+
     font-weight: bold;
-    box-shadow: 0 0 30px rgba(105,60,255,0.3);
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 0 35px rgba(105,60,255,0.3);
+
+    transition: 0.25s;
+
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 45px rgba(0,220,255,0.3);
+
 }
 
-/* SECTIONS */
+/* GENERAL SECTIONS */
 
 section {
+
     padding: 100px 8%;
+
 }
 
 .section-title {
+
     text-align: center;
+
     font-size: 42px;
-    margin-bottom: 50px;
+
+    margin-bottom: 20px;
+
     letter-spacing: 3px;
+
 }
 
 .section-subtitle {
+
     text-align: center;
+
     color: #9999a8;
-    max-width: 650
+
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+
+}
+
+/* NFT */
+
+.nft-section {
+
+    background:
+
+        radial-gradient(circle at 20% 50%, rgba(110,40,255,0.08), transparent 35%);
+
+}
+
+.nft-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+}
+
+.nft-frame {
+
+    position: relative;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,#7b45ff,#00eaff,#ff3cb4);
+
+    box-shadow:
+
+        0 0 45px rgba(100,50,255,0.25),
+
+        0 0 100px rgba(0,220,255,0.08);
+
+}
+
+.nft-image {
+
+    display: block;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    background: #05050a;
+
+}
+
+.nft-info {
+
+    padding: 10px;
+
+}
+
+.edition {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    border: 1px solid #00eaff;
+
+    border-radius: 30px;
+
+    color: #00eaff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+.nft-info h3 {
+
+    font-size: clamp(34px,5vw,52px);
+
+    margin-bottom: 20px;
+
+}
+
+.nft-info p {
+
+    color: #b4b4c0;
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+
+}
+
+.badges {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 28px 0;
+
+}
+
+.badge {
+
+    padding: 8px 14px;
+
+    border: 1px solid #38384a;
+
+    border-radius: 30px;
+
+    color: #d7d7df;
+
+    font-size: 12px;
+
+}
+
+/* CARDS */
+
+.cards {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 22px;
+
+}
+
+.card {
+
+    padding: 32px;
+
+    min-height: 190px;
+
+    background: linear-gradient(145deg,#11111c,#08080e);
+
+    border: 1px solid #242435;
+
+    border-radius: 12px;
+
+    transition: 0.25s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #694cff;
+
+    box-shadow: 0 15px 40px rgba(80,50,200,0.12);
+
+}
+
+.card-icon {
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+}
+
+.card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+
+}
+
+.card p {
+
+    color: #9999a8;
+
+}
+
+/* ROADMAP */
+
+.roadmap {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+.phase {
+
+    position: relative;
+
+    margin-bottom: 22px;
+
+    padding: 28px 30px;
+
+    border-left: 3px solid #7b45ff;
+
+    background: linear-gradient(90deg,#0e0e17,#08080e);
+
+    border-radius: 0 8px 8px 0;
+
+}
+
+.phase h3 {
+
+    color: #b08cff;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+.phase p {
+
+    color: #aaaab7;
+
+}
+
+/* TOKEN */
+
+.token-section {
+
+    background:
+
+        radial-gradient(circle at 50% 50%, rgba(110,40,255,0.12), transparent 45%);
+
+}
+
+.token-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    background: linear-gradient(145deg,#10101a,#07070c);
+
+    border: 1px solid #29293a;
+
+    border-radius: 14px;
+
+    box-shadow: 0 0 60px rgba(80,40,220,0.08);
+
+}
+
+.token-name {
+
+    font-size: clamp(42px,8vw,70px);
+
+    font-weight: 900;
+
+    letter-spacing: 10px;
+
+    background: linear-gradient(90deg,#ffffff,#9e7cff,#00eaff);
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+.token-info {
+
+    margin-top: 25px;
+
+    color: #aaaab7;
+
+}
+
+.token-info p {
+
+    margin: 7px 0;
+
+}
+
+.contract {
+
+    margin-top: 28px;
+
+    padding: 16px;
+
+    background: #050509;
+
+    border: 1px solid #282838;
+
+    border-radius: 6px;
+
+    color: #00eaff;
+
+}
+
+/* SOCIALS */
+
+.social-section {
+
+    text-align: center;
+
+}
+
+.social-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+.social-button {
+
+    padding: 13px 24px;
+
+    border: 1px solid #303044;
+
+    border-radius: 6px;
+
+    color: #c5c5d0;
+
+    transition: 0.25s;
+
+}
+
+.social-button:hover {
+
+    border-color: #00eaff;
+
+    color: #00eaff;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 55px 20px;
+
+    border-top: 1px solid #181824;
+
+    color: #777784;
+
+}
+
+footer .brand {
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+
+    margin-bottom: 10px;
+
+}
+
+footer p {
+
+    margin-top: 5px;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+
+        padding: 18px 5%;
+
+    }
+
+    .nav-links {
+
+        gap: 12px;
+
+        font-size: 11px;
+
+    }
+
+    .hero h1 {
+
+        letter-spacing: 9px;
+
+    }
+
+    .hero h2 {
+
+        letter-spacing: 3px;
+
+    }
+
+    .nft-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    section {
+
+        padding: 75px 6%;
+
+    }
+
+    .section-title {
+
+        font-size: 34px;
+
+    }
+
+    .token-box {
+
+        padding: 40px 20px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">NEOVX</div>
+
+    <div class="nav-links">
+
+        <a href="#nft">NFT</a>
+
+        <a href="#utility">Utility</a>
+
+        <a href="#roadmap">Roadmap</a>
+
+        <a href="#token">Token</a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>NEOVX</h1>
+
+        <h2>MORE THAN A COIN.</h2>
+
+        <p>
+
+            Building the future of digital culture through NFTs,
+
+            community, technology and decentralized innovation.
+
+        </p>
+
+        <a href="#nft" class="btn">
+
+            EXPLORE THE VISION
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- NFT -->
+
+<section id="nft" class="nft-section">
+
+    <h2 class="section-title">
+
+        FEATURED NFT
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        The first vision from the NEOVX universe.
+
+    </p>
+
+    <div class="nft-container">
+
+        <div class="nft-frame">
+
+            <img
+
+                class="nft-image"
+
+                src="D3A5123C-D156-4D6D-9BE6-CE41847D9898.png"
+
+                alt="Future Vision #001 — NEOVX NFT"
+
+            >
+
+        </div>
+
+        <div class="nft-info">
+
+            <div class="edition">
+
+                1/1 EDITION
+
+            </div>
+
+            <h3>Future Vision #001</h3>
+
+            <p>
+
+                A lone visionary stands at the edge of tomorrow.
+
+            </p>
+
+            <p>
+
+                Blending classic pixel art with a futuristic
+
+                cyberpunk aesthetic, this piece represents ambition,
+
+                technology, and the relentless pursuit of a higher level.
+
+            </p>
+
+            <p>
+
+                Beneath the neon lights of a city that never sleeps,
+
+                the character looks toward a future where limits are
+
+                meant to be broken.
+
+            </p>
+
+            <div class="badges">
+
+                <span class="badge">Future</span>
+
+                <span class="badge">Ambition</span>
+
+                <span class="badge">Technology</span>
+
+                <span class="badge">Evolution</span>
+
+                <span class="badge">Pixel Art</span>
+
+                <span class="badge">Cyberpunk</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- UTILITY -->
+
+<section id="utility">
+
+    <h2 class="section-title">
+
+        THE ECOSYSTEM
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        NEOVX is designed to grow beyond a token.
+
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">⚡</div>
+
+            <h3>NFT</h3>
+
+            <p>
+
+                Digital art and collectibles forming the visual
+
+                identity of the NEOVX universe.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🌐</div>
+
+            <h3>Community</h3>
+
+            <p>
+
+                A community-driven ecosystem built around creativity,
+
+                technology and digital culture.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🚀</div>
+
+            <h3>Future</h3>
+
+            <p>
+
+                Expanding toward new digital experiences,
+
+                products and decentralized applications.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ROADMAP -->
+
+<section id="roadmap">
+
+    <h2 class="section-title">
+
+        ROADMAP
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        From the first vision to a growing digital ecosystem.
+
+    </p>
+
+    <div class="roadmap">
+
+        <div class="phase">
+
+            <h3>PHASE 01 — FOUNDATION</h3>
+
+            <p>
+
+                NEOVX identity, website, initial NFT artwork
+
+                and project foundation.
+
+            </p>
+
+        </div>
+
+        <div class="phase">
+
+            <h3>PHASE 02 — COMMUNITY</h3>
+
+            <p>
+
+                Build the NEOVX community and establish the
+
+                project's digital presence.
+
+            </p>
+
+        </div>
+
+        <div class="phase">
+
+            <h3>PHASE 03 — TOKEN</h3>
+
+            <p>
+
+                Launch the NEOVX token and develop the ecosystem
+
+                around its utility.
+
+            </p>
+
+        </div>
+
+        <div class="phase">
+
+            <h3>PHASE 04 — EXPANSION</h3>
+
+            <p>
+
+                NFTs, partnerships, digital experiences and
+
+                additional NEOVX ecosystem utilities.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TOKEN -->
+
+<section id="token" class="token-section">
+
+    <h2 class="section-title">
+
+        NEOVX TOKEN
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        The foundation of the NEOVX ecosystem.
+
+    </p>
+
+    <div class="token-box">
+
+        <div class="token-name">
+
+            NEOVX
+
+        </div>
+
+        <div class="token-info">
+
+            <p>
+
+                <strong>Ticker:</strong> NEOVX
+
+            </p>
+
+            <p>
+
+                <strong>Status:</strong> Preparing for launch
+
+            </p>
+
+            <p>
+
+                <strong>Contract:</strong> Not deployed yet
+
+            </p>
+
+        </div>
+
+        <div class="contract">
+
+            CONTRACT ADDRESS — COMING SOON
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOCIALS -->
+
+<section class="social-section">
+
+    <h2 class="section-title">
+
+        JOIN THE MOVEMENT
+
+    </h2>
+
+    <p class="section-subtitle">
+
+        Follow the development of NEOVX as the vision becomes reality.
+
+    </p>
+
+    <div class="social-buttons">
+
+        <a
+
+            class="social-button"
+
+            href="https://github.com/aliyusalabba-jpg/-neovx-site"
+
+            target="_blank"
+
+        >
+
+            GitHub
+
+        </a>
+
+        <a
+
+            class="social-button"
+
+            href="#"
+
+        >
+
+            X / Twitter
+
+        </a>
+
+        <a
+
+            class="social-button"
+
+            href="#"
+
+        >
+
+            Telegram
+
+        </a>
+
+        <a
+
+            class="social-button"
+
+            href="#"
+
+        >
+
+            Discord
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="brand">
+
+        NEOVX
+
+    </div>
+
+    <p>
+
+        MORE THAN A COIN. HIGHER LEVELS.
+
+    </p>
+
+    <p>
+
+        NEOVX © 2026
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>
